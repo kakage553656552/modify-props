@@ -7,20 +7,14 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data() {
     return {
       formData: {}
     }
   },
   methods: {
-    // 更新 formData 对象
     updateFormData(newData) {
       this.formData = newData
     }
