@@ -21,12 +21,13 @@ export default {
   props: {
     data: {
       type: Object,
-      required: true
+      required: true,
+      default: () => ({}) // 默认值为空对象
     }
   },
   data() {
     return {
-      localData: { ...this.data } // 初始化本地数据
+      localData: cloneDeep(this.data) // 初始化本地数据
     };
   },
   watch: {
